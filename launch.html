@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<style>
+.st{width:1000px;height:200px;padding:10px;border:2px solid black;}
+</style>
+<body onpageshow="myFunction()">
+	<h3>Using web storage text is transferred from one web page to another.</h3>
+<textarea id="stxt" name="NS" rows="5" cols="80" readonly="readonly" class="nst">If text is selected it will be displayed here...</textarea>
+
+<script>
+var myData = localStorage['objectToPass'];
+localStorage.removeItem( 'objectToPass' ); // Clear the localStorage
+var firstData = myData;
+<!-- var secondData = myData[1]; -->
+
+
+function myFunction() {
+
+  document.getElementById('stxt').innerHTML=firstData;
+}
+</script>
+
+</body>
+</html>
